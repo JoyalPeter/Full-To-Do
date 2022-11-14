@@ -1,7 +1,7 @@
 const knexInstance = require("../database/connection");
 
 const getData = async () => {
-  const result = await knexInstance("todo").select("*");
+  const result = await knexInstance("todo").select("*").orderBy("id");
   return result;
 };
 
